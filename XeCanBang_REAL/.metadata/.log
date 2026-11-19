@@ -1,0 +1,692 @@
+!SESSION 2026-11-19 13:00:30.821 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  D:\XeCanBang_REAL\XeCanBang\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\XeCanBang_REAL\XeCanBang\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-19 13:01:03.445
+!MESSAGE Log4j2 initialized with config file D:\XeCanBang_REAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-19 13:01:08.945
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2026-11-19 13:01:09.059
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2026-11-19 13:01:09.059
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2026-11-19 13:01:09.059
+!MESSAGE D:\XeCanBang_REAL\XeCanBang overlaps the location of another project: 'XeCanBang'
+
+!ENTRY org.eclipse.core.resources 4 368 2026-11-19 13:01:09.084
+!MESSAGE Resource '/Lab4' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Lab4' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:183)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.openReadmeFile(AbstractCubeIDEProjectConfigurator.java:1008)
+	at com.st.stm32cube.ide.mcu.ide.ui.project.internal.MCUProjectImporter$3.run(MCUProjectImporter.java:387)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:166)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4099)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:01:10.648
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:01:10.648
+!MESSAGE port: 
+!SESSION 2026-11-19 13:02:19.390 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  D:\XeCanBang_REAL\XeCanBang\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\XeCanBang_REAL\XeCanBang\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-19 13:02:30.893
+!MESSAGE Log4j2 initialized with config file D:\XeCanBang_REAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-19 13:02:35.992
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2026-11-19 13:02:36.080
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2026-11-19 13:02:36.080
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2026-11-19 13:02:36.080
+!MESSAGE D:\XeCanBang_REAL\XeCanBang overlaps the location of another project: 'XeCanBang'
+
+!ENTRY org.eclipse.core.resources 4 368 2026-11-19 13:02:36.116
+!MESSAGE Resource '/Lab4' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Lab4' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:183)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.openReadmeFile(AbstractCubeIDEProjectConfigurator.java:1008)
+	at com.st.stm32cube.ide.mcu.ide.ui.project.internal.MCUProjectImporter$3.run(MCUProjectImporter.java:387)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:166)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4099)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:02:37.690
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:02:37.691
+!MESSAGE port: 
+!SESSION 2026-11-19 13:03:01.960 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  D:\XeCanBang_REAL\XeCanBang\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\XeCanBang_REAL\XeCanBang\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-19 13:03:10.100
+!MESSAGE Log4j2 initialized with config file D:\XeCanBang_REAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-19 13:03:15.187
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2026-11-19 13:03:15.279
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2026-11-19 13:03:15.279
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2026-11-19 13:03:15.279
+!MESSAGE D:\XeCanBang_REAL\XeCanBang overlaps the location of another project: 'XeCanBang'
+
+!ENTRY org.eclipse.core.resources 4 368 2026-11-19 13:03:15.297
+!MESSAGE Resource '/Lab4' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Lab4' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:183)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.openReadmeFile(AbstractCubeIDEProjectConfigurator.java:1008)
+	at com.st.stm32cube.ide.mcu.ide.ui.project.internal.MCUProjectImporter$3.run(MCUProjectImporter.java:387)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:166)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4099)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:03:16.869
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:03:16.870
+!MESSAGE port: 
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 0 2026-11-19 13:03:43.362
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.compositeRepository
+!STACK 0
+java.lang.NullPointerException: Cannot enter synchronized block because "this.browseFileTransferProtocolMap" is null
+	at org.eclipse.ecf.internal.provider.filetransfer.Activator.getBrowseFileTransfer(Activator.java:633)
+	at org.eclipse.ecf.provider.filetransfer.browse.MultiProtocolFileSystemBrowserAdapter.sendBrowseRequest(MultiProtocolFileSystemBrowserAdapter.java:81)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.sendBrowseRequest(FileInfoReader.java:183)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:108)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:124)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:129)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:275)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.getLastModified(CacheManager.java:278)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:232)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.getLocalFile(CompositeMetadataRepositoryFactory.java:77)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:100)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:799)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:697)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:799)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:697)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:164)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:144)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:83)
+!SESSION 2026-11-19 13:03:51.814 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  D:\XeCanBang_REAL\XeCanBang\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\XeCanBang_REAL\XeCanBang\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-19 13:04:03.340
+!MESSAGE Log4j2 initialized with config file D:\XeCanBang_REAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-19 13:04:08.364
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2026-11-19 13:04:08.496
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2026-11-19 13:04:08.496
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2026-11-19 13:04:08.496
+!MESSAGE D:\XeCanBang_REAL\XeCanBang overlaps the location of another project: 'XeCanBang'
+
+!ENTRY org.eclipse.core.resources 4 368 2026-11-19 13:04:08.508
+!MESSAGE Resource '/Lab4' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Lab4' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:183)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.openReadmeFile(AbstractCubeIDEProjectConfigurator.java:1008)
+	at com.st.stm32cube.ide.mcu.ide.ui.project.internal.MCUProjectImporter$3.run(MCUProjectImporter.java:387)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:166)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4099)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:04:09.181
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:04:09.181
+!MESSAGE port: 
+!SESSION 2026-11-19 13:05:34.484 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  D:\XeCanBang_REAL\XeCanBang\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\XeCanBang_REAL\XeCanBang\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-19 13:05:50.116
+!MESSAGE Log4j2 initialized with config file D:\XeCanBang_REAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-19 13:05:55.381
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2026-11-19 13:05:55.483
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2026-11-19 13:05:55.483
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2026-11-19 13:05:55.483
+!MESSAGE D:\XeCanBang_REAL\XeCanBang overlaps the location of another project: 'XeCanBang'
+
+!ENTRY org.eclipse.core.resources 4 368 2026-11-19 13:05:55.541
+!MESSAGE Resource '/Lab4' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Lab4' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:183)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.openReadmeFile(AbstractCubeIDEProjectConfigurator.java:1008)
+	at com.st.stm32cube.ide.mcu.ide.ui.project.internal.MCUProjectImporter$3.run(MCUProjectImporter.java:387)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:166)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4099)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:05:56.192
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:05:56.193
+!MESSAGE port: 
+
+!ENTRY org.eclipse.ui 4 0 2026-11-19 13:06:57.034
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.part.ISetSelectionTarget.selectReveal(org.eclipse.jface.viewers.ISelection)" because "pe_view" is null
+	at com.st.stm32cube.ide.mcu.ide.ui.wizard.STSmartImportWizard.performFinish(STSmartImportWizard.java:26)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:837)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:474)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:265)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at com.st.stm32cube.ide.mcu.ide.handlers.STM32ProjectCreationImportHandler.execute(STM32ProjectCreationImportHandler.java:62)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:277)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:98)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:299)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:233)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:174)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:165)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:204)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:444)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:442)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:464)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.ui 4 0 2026-11-19 13:06:57.890
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.part.ISetSelectionTarget.selectReveal(org.eclipse.jface.viewers.ISelection)" because "pe_view" is null
+	at com.st.stm32cube.ide.mcu.ide.ui.wizard.STSmartImportWizard.performFinish(STSmartImportWizard.java:26)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:837)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:474)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:265)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at com.st.stm32cube.ide.mcu.ide.handlers.STM32ProjectCreationImportHandler.execute(STM32ProjectCreationImportHandler.java:62)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:277)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:98)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:299)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:233)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:174)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:165)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:204)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:444)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:442)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:464)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.ui.ide 4 0 2026-11-19 13:06:57.891
+!MESSAGE Could not import project located at D:\XeCanBang_REAL
+!STACK 0
+org.eclipse.ui.internal.wizards.datatransfer.CouldNotImportProjectException: Could not import project located at D:\XeCanBang_REAL
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.toExistingOrNewProject(SmartImportJob.java:555)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.run(SmartImportJob.java:246)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:211)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:95)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:305)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:291)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.createOrImportProject(SmartImportJob.java:594)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.toExistingOrNewProject(SmartImportJob.java:542)
+	... 2 more
+
+!ENTRY org.eclipse.ui 4 0 2026-11-19 13:07:04.966
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.part.ISetSelectionTarget.selectReveal(org.eclipse.jface.viewers.ISelection)" because "pe_view" is null
+	at com.st.stm32cube.ide.mcu.ide.ui.wizard.STSmartImportWizard.performFinish(STSmartImportWizard.java:26)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:837)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:474)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:265)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at com.st.stm32cube.ide.mcu.ide.handlers.STM32ProjectCreationImportHandler.execute(STM32ProjectCreationImportHandler.java:62)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:277)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:98)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:299)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:233)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:174)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:165)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:204)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:444)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:442)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:464)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.ui 4 0 2026-11-19 13:07:07.106
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.part.ISetSelectionTarget.selectReveal(org.eclipse.jface.viewers.ISelection)" because "pe_view" is null
+	at com.st.stm32cube.ide.mcu.ide.ui.wizard.STSmartImportWizard.performFinish(STSmartImportWizard.java:26)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:837)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:474)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:265)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at com.st.stm32cube.ide.mcu.ide.handlers.STM32ProjectCreationImportHandler.execute(STM32ProjectCreationImportHandler.java:62)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:277)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:98)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:299)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:233)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:174)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:165)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:204)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:444)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:442)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:464)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.ui.ide 4 0 2026-11-19 13:07:07.106
+!MESSAGE Could not import project located at D:\XeCanBang_REAL
+!STACK 0
+org.eclipse.ui.internal.wizards.datatransfer.CouldNotImportProjectException: Could not import project located at D:\XeCanBang_REAL
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.toExistingOrNewProject(SmartImportJob.java:555)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.run(SmartImportJob.java:246)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:211)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:95)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:305)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:291)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.createOrImportProject(SmartImportJob.java:594)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.toExistingOrNewProject(SmartImportJob.java:542)
+	... 2 more
+!SESSION 2026-11-19 13:07:26.024 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  D:\XeCanBang_REAL\XeCanBang\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\XeCanBang_REAL\XeCanBang\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-11-19 13:07:33.808
+!MESSAGE Log4j2 initialized with config file D:\XeCanBang_REAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-11-19 13:07:38.184
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2026-11-19 13:07:38.442
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2026-11-19 13:07:38.443
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2026-11-19 13:07:38.443
+!MESSAGE D:\XeCanBang_REAL\XeCanBang overlaps the location of another project: 'XeCanBang'
+
+!ENTRY org.eclipse.core.resources 4 368 2026-11-19 13:07:38.452
+!MESSAGE Resource '/Lab4' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Lab4' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:183)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.openReadmeFile(AbstractCubeIDEProjectConfigurator.java:1008)
+	at com.st.stm32cube.ide.mcu.ide.ui.project.internal.MCUProjectImporter$3.run(MCUProjectImporter.java:387)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:166)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4099)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:07:39.103
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-11-19 13:07:39.104
+!MESSAGE port: 

@@ -1,0 +1,164 @@
+#include "comm.h"
+#include "balance.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+// Bien nay nam trong main.c
+extern volatile float angle;
+extern volatile float v_f;
+
+#define RX_BUF_SIZE     128
+#define CMD_TIMEOUT_MS  300      // mat lenh C qua 300 ms -> dung (v_set = turn_set = 0)
+#define TEL_PERIOD_MS   50       // 20 Hz
+#define CMD_V_MAX       0.5f     // gioi han an toan cua lenh C
+#define CMD_T_MAX       150.0f
+
+volatile uint32_t comm_rx_lines = 0;
+volatile uint32_t comm_tx_count = 0;
+
+static UART_HandleTypeDef *uart;
+static uint8_t rx_byte;
+static volatile uint8_t  rx_ring[RX_BUF_SIZE];
+static volatile uint16_t rx_head = 0, rx_tail = 0;
+
+static char    line[96];
+static uint8_t line_len = 0;
+static uint32_t last_cmd_ms = 0, last_tel_ms = 0;
+static uint8_t  cmd_seen = 0;
+static char     tx_buf[96];
+
+static float clampf(float x, float lo, float hi)
+{
+    return (x < lo) ? lo : ((x > hi) ? hi : x);
+}
+
+// Doc 1 so thuc tu chuoi, tra ve 0 neu khong doc duoc (tranh gan 0 khi dong lenh bi hong)
+static int next_float(char **p, float *out)
+{
+    char *end;
+    float v = strtof(*p, &end);
+    if (end == *p) return 0;
+    *p = end;
+    *out = v;
+    return 1;
+}
+
+void Comm_Init(UART_HandleTypeDef *huart)
+{
+    uart = huart;
+    HAL_UART_Receive_IT(uart, &rx_byte, 1);
+}
+
+// ---- Ngat nhan 1 byte ----
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *h)
+{
+    if (h == uart) {
+        uint16_t next = (uint16_t)((rx_head + 1) % RX_BUF_SIZE);
+        if (next != rx_tail) {
+            rx_ring[rx_head] = rx_byte;
+            rx_head = next;
+        }
+        HAL_UART_Receive_IT(uart, &rx_byte, 1);
+    }
+}
+
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *h)
+{
+    if (h == uart) {
+        __HAL_UART_CLEAR_OREFLAG(h);
+        HAL_UART_Receive_IT(uart, &rx_byte, 1);
+    }
+}
+
+static void handle_line(char *s, uint32_t now)
+{
+    char *p = s + 1;
+    float a, b, c, d;
+
+    switch (s[0]) {
+    case 'C':
+        if (next_float(&p, &a) && next_float(&p, &b)) {
+            v_set    = clampf(a, -CMD_V_MAX, CMD_V_MAX);
+            turn_set = clampf(b, -CMD_T_MAX, CMD_T_MAX);
+            last_cmd_ms = now;
+            cmd_seen = 1;
+            comm_rx_lines++;
+        }
+        break;
+
+    case 'A':
+        bal_arm = (atoi(p) != 0) ? 1 : 0;
+        comm_rx_lines++;
+        break;
+
+    case 'G':
+        if (next_float(&p, &a) && next_float(&p, &b) && next_float(&p, &c) && next_float(&p, &d)) {
+            pid_kp    = clampf(a, 0.0f, 0.5f);
+            pid_ki    = clampf(b, 0.0f, 2.0f);
+            pid_kd    = clampf(c, 0.0f, 0.05f);
+            angle_set = clampf(d, -10.0f, 10.0f);
+            comm_rx_lines++;
+        }
+        break;
+
+    case 'V':
+        if (next_float(&p, &a) && next_float(&p, &b) && next_float(&p, &c)) {
+            spd_kp    = clampf(a, 0.0f, 30.0f);
+            spd_ki    = clampf(b, 0.0f, 10.0f);
+            spd_limit = clampf(c, 0.0f, 10.0f);
+            comm_rx_lines++;
+        }
+        break;
+
+    case 'Y':
+        if (next_float(&p, &a) && next_float(&p, &b)) {
+            yaw_kp = clampf(a, 0.0f, 0.02f);
+            yaw_ki = clampf(b, 0.0f, 0.2f);
+            comm_rx_lines++;
+        }
+        break;
+
+    default:
+        break;
+    }
+}
+
+void Comm_Process(uint32_t now_ms)
+{
+    // 1. Rut byte tu bo dem vong, ghep thanh dong lenh
+    while (rx_tail != rx_head) {
+        uint8_t ch = rx_ring[rx_tail];
+        rx_tail = (uint16_t)((rx_tail + 1) % RX_BUF_SIZE);
+        if (ch == '\n' || ch == '\r') {
+            if (line_len > 0) {
+                line[line_len] = '\0';
+                handle_line(line, now_ms);
+                line_len = 0;
+            }
+        } else if (line_len < sizeof(line) - 1) {
+            line[line_len++] = (char)ch;
+        } else {
+            line_len = 0;                  // dong qua dai: bo
+        }
+    }
+
+    // 2. Watchdog: chi hoat dong sau khi da nhan lenh C dau tien
+    //    (de van thu v_set bang Live Expressions khi chua noi wifi)
+    if (cmd_seen && (now_ms - last_cmd_ms) > CMD_TIMEOUT_MS) {
+        v_set = 0.0f;
+        turn_set = 0.0f;
+    }
+
+    // 3. Telemetry 20 Hz (khong chan, dung ngat)
+    if ((now_ms - last_tel_ms) >= TEL_PERIOD_MS && uart->gState == HAL_UART_STATE_READY) {
+        last_tel_ms = now_ms;
+        int n = snprintf(tx_buf, sizeof(tx_buf), "T %d %d %d %d %d\n",
+                         (int)(angle * 100.0f),
+                         (int)(v_f * 1000.0f),
+                         (int)bal_state,
+                         (int)(u_out * 1000.0f),
+                         (int)bal_arm);
+        if (n > 0) { HAL_UART_Transmit_IT(uart, (uint8_t *)tx_buf, (uint16_t)n); comm_tx_count++; }
+    }
+}

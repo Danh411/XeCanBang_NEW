@@ -1,0 +1,49 @@
+#ifndef BALANCE_H
+#define BALANCE_H
+
+#include <stdint.h>
+
+typedef enum {
+    BAL_IDLE   = 0,   // dung yen, motor tat, cho bat can bang
+    BAL_RUN    = 1,   // dang chay PID can bang
+    BAL_FALLEN = 2    // xe nga hoac mat cam bien, motor tat
+} BalState;
+
+// ---- Vong trong: giu goc (chinh/quan sat bang Live Expressions hoac web) ----
+extern volatile int      bal_arm;      // dat 1 de bat can bang, 0 de tat
+extern volatile BalState bal_state;
+extern volatile float    pid_kp, pid_ki, pid_kd;
+extern volatile float    angle_set;    // goc can bang (do)
+extern volatile float    fall_angle;   // |goc - angle_set| vuot gia tri nay -> ngat motor (do)
+extern volatile float    deadband;     // duty toi thieu de motor bat dau quay (0..0.3)
+extern volatile float    u_out;        // dau ra PID (-1..1)
+
+// ---- Vong ngoai: giu toc do ~ v_set de xe khong troi ----
+extern volatile int      spd_on;       // 1 = bat vong toc do
+extern volatile float    spd_kp;       // do tren (m/s)
+extern volatile float    spd_ki;       // do tren (m/s * s)
+extern volatile float    spd_limit;    // gioi han goc nghieng them vao tu vong toc do (do)
+extern volatile float    v_set;        // toc do dat (m/s), duong = ve phia am (phia truoc)
+extern volatile float    angle_cmd;    // goc dat thuc su dang dung (do), de quan sat
+
+// ---- Vong re: giu toc do quay quanh truc dung ----
+extern volatile float    turn_set;     // toc do quay dat (do/giay), duong = re PHAI
+extern volatile float    yaw_kp, yaw_ki;
+extern volatile float    turn_limit;   // gioi han duty cong/tru cho moi banh khi re (0..0.4)
+extern volatile float    turn_out;     // duty re dang cong (A: +turn_out, B: -turn_out)
+
+extern volatile float    v_acc_limit;  // gia toc toi da cua lenh toc do (m/s^2)
+extern volatile float    kff;          // bu suc phan dien: duty cong them = kff * toc do
+
+void Balance_Init(void);
+
+// angle    : goc nghieng sau bo loc (do)
+// gyro_rate: toc do goc quanh truc nghieng (do/giay), cung chieu voi angle
+// dt       : chu ky (giay)
+// sensor_ok: 0 neu doc MPU that bai lien tuc
+// v_meas   : toc do xe do bang encoder (m/s), duong = ve phia am
+// yaw_rate : toc do quay quanh truc dung (do/giay), duong = dang re phai
+void Balance_Update(float angle, float gyro_rate, float dt, int sensor_ok,
+                    float v_meas, float yaw_rate);
+
+#endif

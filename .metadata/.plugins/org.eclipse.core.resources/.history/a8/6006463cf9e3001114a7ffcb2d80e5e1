@@ -1,0 +1,24 @@
+#ifndef COMM_H
+#define COMM_H
+
+#include "stm32f4xx_hal.h"
+
+// Giao tiep voi ESP32 qua UART (dong lenh ASCII ket thuc bang '\n').
+//
+// ESP32 -> STM32:
+//   C <v> <turn>            toc do tien (m/s, + = ve phia am), toc do re (do/giay, + = re phai)
+//   A <0|1>                 tat/bat can bang
+//   G <kp> <ki> <kd> <angle_set>   vong goc
+//   V <kp> <ki> <limit>            vong toc do
+//   Y <kp> <ki>                    vong re
+// STM32 -> ESP32 (20 Hz):
+//   T <goc*100> <v*1000> <state> <u*1000> <arm>
+
+void Comm_Init(UART_HandleTypeDef *huart);
+
+// Goi moi vong lap: phan tich lenh, watchdog, gui telemetry
+void Comm_Process(uint32_t now_ms);
+
+extern volatile uint32_t comm_rx_lines;   // so dong lenh hop le da nhan (de quan sat)
+
+#endif

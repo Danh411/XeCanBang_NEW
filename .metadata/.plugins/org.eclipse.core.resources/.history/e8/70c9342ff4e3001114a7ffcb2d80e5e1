@@ -1,0 +1,122 @@
+#include "balance.h"
+#include "motor.h"
+#include <math.h>
+
+volatile int      bal_arm    = 0;
+volatile BalState bal_state  = BAL_IDLE;
+
+// Gia tri da thu thuc te (19/11)
+volatile float pid_kp     = 0.076f;  // duty tren moi do lech
+volatile float pid_ki     = 0.0f;    // duty tren (do * giay)
+volatile float pid_kd     = 0.0017f; // duty tren moi do/giay
+volatile float angle_set  = 0.22f;   // goc can bang
+volatile float fall_angle = 35.0f;
+volatile float deadband   = 0.05f;
+volatile float u_out      = 0.0f;
+
+// Vong toc do: mac dinh TAT, bat bang spd_on = 1 sau khi da kiem tra encoder
+volatile int   spd_on     = 0;
+volatile float spd_kp     = 4.0f;    // BAT DAU THAP, tang dan khi chay
+volatile float spd_ki     = 2.0f;
+volatile float spd_limit  = 4.0f;
+volatile float v_set      = 0.0f;
+volatile float angle_cmd  = 0.0f;
+
+static float integ     = 0.0f;       // tich phan vong goc (da nhan Ki)
+static float spd_integ = 0.0f;       // tich phan vong toc do (da nhan Ki), don vi do
+#define I_LIMIT       0.30f          // gioi han tich phan vong goc theo duty
+#define ARM_MAX_TILT  5.0f           // chi cho bat khi lech < 5 do
+
+static void stop_all(void)
+{
+    Motor_StopAll();
+    integ = 0.0f;
+    spd_integ = 0.0f;
+    u_out = 0.0f;
+    angle_cmd = angle_set;
+}
+
+void Balance_Init(void)
+{
+    bal_state = BAL_IDLE;
+    bal_arm = 0;
+    stop_all();
+}
+
+static float clampf(float x, float lo, float hi)
+{
+    return (x < lo) ? lo : ((x > hi) ? hi : x);
+}
+
+void Balance_Update(float angle, float gyro_rate, float dt, int sensor_ok, float v_meas)
+{
+    float err_phys = angle - angle_set;     // do lech vat ly so voi goc can bang
+
+    if (!sensor_ok) {                       // mat cam bien: ngat an toan
+        bal_arm = 0;
+        bal_state = BAL_FALLEN;
+        stop_all();
+        return;
+    }
+
+    switch (bal_state) {
+
+    case BAL_IDLE:
+        stop_all();
+        if (bal_arm) {
+            if (fabsf(err_phys) < ARM_MAX_TILT) bal_state = BAL_RUN;
+            else bal_arm = 0;               // dang nghieng qua, khong cho bat
+        }
+        break;
+
+    case BAL_RUN: {
+        if (!bal_arm) { bal_state = BAL_IDLE; stop_all(); break; }
+        if (fabsf(err_phys) > fall_angle) { // nga
+            bal_state = BAL_FALLEN;
+            bal_arm = 0;
+            stop_all();
+            break;
+        }
+
+        // ---- Vong ngoai (toc do) -> goc dat ----
+        // Xe troi ve phia am (v > v_set) -> dat goc nghieng them ve phia duong (ngua ra sau)
+        // de vong trong keo banh lai.
+        float target = angle_set;
+        if (spd_on) {
+            float v_err = v_meas - v_set;
+            spd_integ += spd_ki * v_err * dt;
+            spd_integ = clampf(spd_integ, -spd_limit, spd_limit);
+            float off = clampf(spd_kp * v_err + spd_integ, -spd_limit, spd_limit);
+            target = angle_set + off;
+        } else {
+            spd_integ = 0.0f;
+        }
+        angle_cmd = target;
+
+        // ---- Vong trong (goc): PID ----
+        float err = angle - target;
+        integ += pid_ki * err * dt;
+        integ = clampf(integ, -I_LIMIT, I_LIMIT);
+
+        float u = -(pid_kp * err + integ + pid_kd * gyro_rate);
+        u = clampf(u, -1.0f, 1.0f);
+        u_out = u;
+
+        // Bu vung chet cua motor
+        float duty = 0.0f;
+        if (u >  0.01f) duty =  deadband + u * (1.0f - deadband);
+        if (u < -0.01f) duty = -deadband + u * (1.0f - deadband);
+
+        Motor_Set(0, duty);
+        Motor_Set(1, duty);
+        break;
+    }
+
+    case BAL_FALLEN:
+    default:
+        stop_all();
+        // Tu ve IDLE khi xe duoc dat thang lai (van phai tu bat bal_arm = 1)
+        if (fabsf(err_phys) < ARM_MAX_TILT) bal_state = BAL_IDLE;
+        break;
+    }
+}

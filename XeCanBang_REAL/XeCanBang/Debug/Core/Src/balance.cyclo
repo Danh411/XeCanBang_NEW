@@ -1,0 +1,4 @@
+../Core/Src/balance.c:42:14:clampf	3
+../Core/Src/balance.c:47:13:stop_all	1
+../Core/Src/balance.c:61:6:Balance_Init	1
+../Core/Src/balance.c:68:6:Balance_Update	12
